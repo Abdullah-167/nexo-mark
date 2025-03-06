@@ -18,18 +18,17 @@ function CustomCursor() {
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
       requestAnimationFrame(() => {
-        // Update position only on animation frame
         cursorX.set(e.clientX - (variant === "PROJECT" ? 32 : 8)); // Adjust offset based on variant
         cursorY.set(e.clientY - (variant === "PROJECT" ? 32 : 8));
       });
     };
-
+  
     window.addEventListener("mousemove", moveCursor);
-
     return () => {
       window.removeEventListener("mousemove", moveCursor);
     };
-  }, [variant]);
+  }, [variant, cursorX, cursorY]); // Added cursorX and cursorY
+  
 
   const variants: Variants = {
     DEFAULT: {
