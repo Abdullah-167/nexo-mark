@@ -1,0 +1,734 @@
+{
+  "about": {
+    "name": "John doe",
+    "title": "Software Developer",
+    "subTitle": "I develop 3D visuals, user interfaces and web applications",
+    "description": "As a React developer with 5 years of experience, I have honed my skills in JavaScript and am currently learning TypeScript to expand my expertise. I pride myself on being a quick learner and attentive listener, which allows me to collaborate effectively with clients to create efficient and scalable solutions. My focus is on developing user-friendly applications that solve real-world problems.",
+    "quote": "Live the Life as you want",
+    "exp_year": "5",
+    "address": "Los Angeles , America",
+    "some_total": "90",
+    "phoneNumber": "+91-9528391901",
+    "contactEmail": "work.tehseen@gmail.com",
+    "avatar": {
+      "public_id": "portfolio3/1713995155677-122l5x.webp",
+      "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/portfolio3/1713995155677-122l5x.webp"
+    },
+    "alternateAvatars": [
+      {
+        "_id": "676e772d8a9e1d0a8b0647ca",
+        "public_id": "portfolio3/1713996156944-1hro1b.webp",
+        "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/portfolio3/1713996156944-1hro1b.webp"
+      }
+    ]
+  },
+  "usageMetrics": {
+    "visits": 0,
+    "downloads": 0
+  },
+  "_id": "65b3a22c01d900e96c4219ae",
+  "username": "portfolio3",
+  "email": "work.tehseen@gmail.com",
+  "role": "admin",
+  "timeline": [
+    {
+      "company_name": "StartupX",
+      "summary": "Contributed to the development of a new social networking platform targeting niche communities.",
+      "sequence": 6,
+      "startDate": "2023-11-13T00:00:00.000Z",
+      "endDate": "2024-03-13T00:00:00.000Z",
+      "jobTitle": "Backend Developer",
+      "jobLocation": " Los Angeles, CA",
+      "bulletPoints": [
+        "Developed scalable backend services using Python and Django framework.",
+        "\nImplemented user authentication and authorization using OAuth 2.0 and JWT tokens.",
+        "\nDesigned and optimized database schemas for performance and scalability.",
+        "\nImplemented real-time messaging features using WebSockets and Redis.",
+        "\nWorked closely with frontend developers to design APIs and ensure smooth integration with the frontend."
+      ],
+      "forEducation": true,
+      "enabled": true,
+      "_id": "65f1fe900556c3f887e9db94"
+    },
+    {
+      "company_name": "CloudTech Innovations",
+      "summary": "Contributed to the development of a cloud-based SaaS platform for managing IT infrastructure.",
+      "sequence": 4,
+      "startDate": "2024-03-06T00:00:00.000Z",
+      "endDate": "2024-03-20T00:00:00.000Z",
+      "jobTitle": "Software Developer",
+      "jobLocation": "Austin, TX",
+      "bulletPoints": [
+        "Developed microservices using Node.js and deployed them using Docker containers.",
+        "\nImplemented user authentication and authorization using OAuth 2.0 and JWT tokens.",
+        "\nIntegrated with cloud providers such as AWS and Azure to manage infrastructure resources.",
+        "\nDesigned and implemented RESTful APIs for various platform features.",
+        "\nCollaborated with DevOps engineers to automate deployment and testing processes."
+      ],
+      "forEducation": false,
+      "enabled": true,
+      "_id": "65f1fe4e0556c3f887e9db22"
+    },
+    {
+      "company_name": "Digital Solutions Co.",
+      "summary": "Contributed to the development of a comprehensive CRM solution for enterprise clients.",
+      "sequence": 3,
+      "startDate": "2023-10-11T00:00:00.000Z",
+      "endDate": "2024-03-28T00:00:00.000Z",
+      "jobTitle": "Frontend Developer",
+      "jobLocation": "Seattle, WA",
+      "bulletPoints": [
+        "Implemented user interface components using AngularJS and TypeScript.",
+        "\nCollaborated with backend developers to integrate frontend components with RESTful APIs.",
+        "\nDeveloped custom data visualizations and dashboards using D3.js and Chart.js.",
+        "\nParticipated in sprint planning meetings and provided accurate estimates for feature development.",
+        "\nConducted A/B tests and analyzed user feedback to iterate on product features.",
+        ""
+      ],
+      "forEducation": false,
+      "enabled": true,
+      "_id": "65f1fe1e0556c3f887e9dab2"
+    },
+    {
+      "company_name": "DataTech Solutions",
+      "summary": "Played a key role in developing a data analytics platform for a diverse range of clients.",
+      "sequence": 2,
+      "startDate": "2024-03-13T00:00:00.000Z",
+      "endDate": "2024-03-22T00:00:00.000Z",
+      "jobTitle": " Full Stack Developer",
+      "jobLocation": " New York, NY",
+      "bulletPoints": [
+        "Developed RESTful APIs and integrated third-party services to ingest and process large volumes of data.",
+        "\nDesigned and implemented responsive user interfaces using React.js and Bootstrap.",
+        "\nWorked closely with data scientists to integrate machine learning models into the platform.",
+        "\nOptimized database queries and improved overall system performance.",
+        "\nConducted unit tests and participated in peer code reviews to ensure code quality.\n"
+      ],
+      "forEducation": true,
+      "enabled": true,
+      "_id": "65f1fdef0556c3f887e9da44"
+    },
+    {
+      "company_name": "Tech Innovations Inc.",
+      "summary": "Contributed to the development of a cutting-edge mobile application aimed at revolutionizing the e-commerce industry.\n",
+      "sequence": 1,
+      "icon": {
+        "public_id": "portfolio3/1710357917833-0mic4.png",
+        "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/portfolio3/1710357917833-0mic4.png"
+      },
+      "startDate": "2024-01-03T00:00:00.000Z",
+      "endDate": "2024-03-08T00:00:00.000Z",
+      "jobTitle": "Software Engineer",
+      "jobLocation": "San Francisco, CA",
+      "bulletPoints": [
+        "Implemented core features and functionalities using React Native.",
+        "Collaborated closely with designers and product managers to iterate on user feedback.",
+        "Conducted code reviews and provided constructive feedback to team members.",
+        "Resolved complex technical challenges to ensure the smooth operation of the application.",
+        "Participated in daily stand-up meetings and sprint planning sessions."
+      ],
+      "forEducation": false,
+      "enabled": true,
+      "_id": "65f1fd9e0556c3f887e9d9d8"
+    },
+    {
+      "company_name": "ThePortfolyo",
+      "summary": "",
+      "sequence": 1,
+      "icon": {
+        "public_id": "1706289470834-siro83",
+        "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/1706289470834-siro83"
+      },
+      "startDate": "2023-12-13T00:00:00.000Z",
+      "endDate": "2024-01-25T00:00:00.000Z",
+      "jobTitle": "Software Developer",
+      "jobLocation": "Bangalore",
+      "bulletPoints": [
+        "Design and build full website",
+        " Optimized Site ",
+        " SEO implemented"
+      ],
+      "forEducation": true,
+      "enabled": true,
+      "_id": "65b3e93feb20546ae6d46369"
+    }
+  ],
+  "skills": [
+    {
+      "enabled": true,
+      "id": 18,
+      "name": "Custom Website Development",
+      "sequence": 19,
+      "percentage": 95,
+      "image": {
+        "public_id": "seo-icon",
+        "url": "https://your-image-host.com/seo-icon"
+      }
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "name": "SEO",
+      "sequence": 18,
+      "percentage": 95,
+      "image": {
+        "public_id": "seo-icon",
+        "url": "https://your-image-host.com/seo-icon"
+      }
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "name": "Facebook Ads",
+      "sequence": 20,
+      "percentage": 92,
+      "image": {
+        "public_id": "facebook-ads-icon",
+        "url": "https://your-image-host.com/facebook-ads-icon"
+      }
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "name": "Content Marketing",
+      "sequence": 21,
+      "percentage": 88,
+      "image": {
+        "public_id": "content-marketing-icon",
+        "url": "https://your-image-host.com/content-marketing-icon"
+      }
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "name": "Email Marketing",
+      "sequence": 22,
+      "percentage": 93,
+      "image": {
+        "public_id": "email-marketing-icon",
+        "url": "https://your-image-host.com/email-marketing-icon"
+      }
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "name": "Social Media Marketing",
+      "sequence": 23,
+      "percentage": 90,
+      "image": {
+        "public_id": "social-media-icon",
+        "url": "https://your-image-host.com/social-media-icon"
+      }
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "name": "Conversion Rate Optimization (CRO)",
+      "sequence": 24,
+      "percentage": 85,
+      "image": {
+        "public_id": "cro-icon",
+        "url": "https://your-image-host.com/cro-icon"
+      }
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "name": "UI/UX Design",
+      "sequence": 28,
+      "percentage": 90,
+      "image": {
+        "public_id": "ui-ux-icon",
+        "url": "https://your-image-host.com/ui-ux-icon"
+      }
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "name": "WordPress",
+      "sequence": 29,
+      "percentage": 85,
+      "image": {
+        "public_id": "wordpress-icon",
+        "url": "https://your-image-host.com/wordpress-icon"
+      }
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "name": "Shopify Development",
+      "sequence": 30,
+      "percentage": 92,
+      "image": {
+        "public_id": "shopify-icon",
+        "url": "https://your-image-host.com/shopify-icon"
+      }
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "name": "Web Performance Optimization",
+      "sequence": 31,
+      "percentage": 88,
+      "image": {
+        "public_id": "performance-icon",
+        "url": "https://your-image-host.com/performance-icon"
+      }
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "name": "Adobe Photoshop",
+      "sequence": 32,
+      "percentage": 90,
+      "image": {
+        "public_id": "photoshop-icon",
+        "url": "https://your-image-host.com/photoshop-icon"
+      }
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "name": "Adobe Illustrator",
+      "sequence": 33,
+      "percentage": 85,
+      "image": {
+        "public_id": "illustrator-icon",
+        "url": "https://your-image-host.com/illustrator-icon"
+      }
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "name": "Canva",
+      "sequence": 34,
+      "percentage": 95,
+      "image": {
+        "public_id": "canva-icon",
+        "url": "https://your-image-host.com/canva-icon"
+      }
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "name": "Branding & Logo Design",
+      "sequence": 35,
+      "percentage": 90,
+      "image": {
+        "public_id": "branding-icon",
+        "url": "https://your-image-host.com/branding-icon"
+      }
+    }
+  ],
+  "youtube": [
+    {
+      "url": "",
+      "title": "Sample Video",
+      "sequence": 1,
+      "image": null,
+      "embedId": "eitWM4gNZoM",
+      "enabled": true,
+      "_id": "65f482e5d689e5777d9457ae"
+    }
+  ],
+  "projects": [
+    {
+      "liveurl": "#",
+      "githuburl": "#",
+      "title": "Project 1",
+      "sequence": 1,
+      "image": {
+        "public_id": "1706285511679-xe7r9t",
+        "url": "/brosh.png"
+      },
+      "techStack": ["Reactjs ", " Nextjs ", " Mern ", " CSS", " TailwindCSS"],
+      "_id": "65b3d9c8d017f6b49c778ca7",
+      "enabled": true
+    },
+    {
+      "liveurl": "#",
+      "githuburl": "#",
+      "title": "Project 2",
+      "sequence": 2,
+      "image": {
+        "public_id": "1706285468702-igx05q",
+        "url": "/evoc.png"
+      },
+      "techStack": ["Reactjs ", " Nextjs ", " Mern ", " CSS", " TailwindCSS"],
+      "_id": "65b3d99dd017f6b49c778c86",
+      "enabled": true
+    },
+    {
+      "liveurl": "#",
+      "githuburl": "#",
+      "title": "Project 3",
+      "sequence": 3,
+      "image": {
+        "public_id": "1706285431821-3lfg2r",
+        "url": "/port.png"
+      },
+      "techStack": ["Reactjs ", " Nextjs ", " Mern ", " CSS", " TailwindCSS"],
+      "_id": "65b3d978d017f6b49c778c67",
+      "enabled": true
+    },
+    {
+      "liveurl": "#",
+      "githuburl": "#",
+      "title": "Project 4",
+      "sequence": 4,
+      "image": {
+        "public_id": "1706285416017-wra7swm",
+        "url": "/rafiky.png"
+      },
+      "techStack": ["Reactjs ", " Nextjs ", " Mern ", " CSS", " TailwindCSS"],
+      "_id": "65b3d969d017f6b49c778c4a",
+      "enabled": true
+    },
+    {
+      "liveurl": "#",
+      "githuburl": "#",
+      "title": "Project 5",
+      "sequence": 5,
+      "image": {
+        "public_id": "1706285405228-98liol",
+        "url": "/serona.png"
+      },
+      "techStack": ["Reactjs ", " Nextjs ", " Mern ", " CSS", " TailwindCSS"],
+      "_id": "65b3d95dd017f6b49c778c2f",
+      "enabled": true
+    },
+    {
+      "liveurl": "#",
+      "githuburl": "#",
+      "title": "Project 6",
+      "sequence": 6,
+      "image": {
+        "public_id": "1706285393568-zl9mcc",
+        "url": "/tweet.png"
+      },
+      "techStack": ["Reactjs ", " Nextjs ", " Mern ", " CSS", " TailwindCSS"],
+      "_id": "65b3d952d017f6b49c778c16",
+      "enabled": true
+    },
+    {
+      "liveurl": "#",
+      "githuburl": "#",
+      "title": "Project 1",
+      "sequence": 1,
+      "image": {
+        "public_id": "1706285378965-91vbk",
+        "url": "/electrofy.png"
+      },
+      "techStack": ["Shopify"],
+      "_id": "65b3d943d017f6b49c778bff",
+      "enabled": true
+    },
+    {
+      "liveurl": "#",
+      "githuburl": "#",
+      "title": "Project 2",
+      "sequence": 2,
+      "image": {
+        "public_id": "1706285368529-zdr5fl",
+        "url": "/safaid.png"
+      },
+      "techStack": ["Shopify"],
+      "_id": "65b3d938d017f6b49c778bea",
+      "enabled": true
+    },
+    {
+      "liveurl": "#",
+      "githuburl": "#",
+      "title": "Project 3",
+      "sequence": 3,
+      "image": {
+        "public_id": "1706285357884-3ja6sw",
+        "url": "/tech.png"
+      },
+      "techStack": ["Shopify"],
+      "_id": "65b3d92ed017f6b49c778bd7",
+      "enabled": true
+    },
+    {
+      "liveurl": "#",
+      "githuburl": "#",
+      "title": "Project 4",
+      "sequence": 4,
+      "image": {
+        "public_id": "1706285347449-dniw0h",
+        "url": "/teeprint.png"
+      },
+      "techStack": ["Shopify"],
+      "_id": "65b3d923d017f6b49c778bc6",
+      "enabled": true
+    },
+    {
+      "liveurl": "#",
+      "githuburl": "#",
+      "title": "Project 1",
+      "sequence": 1,
+      "image": {
+        "public_id": "1706285323287-nt3ya3",
+        "url": "/iqbal.png"
+      },
+      "techStack": ["Wordpress"],
+      "_id": "65b3d8fed017f6b49c778ba9",
+      "enabled": true
+    },
+    {
+      "liveurl": "#",
+      "githuburl": "#",
+      "title": "Project 2",
+      "sequence": 2,
+      "image": {
+        "public_id": "1706284852474-gh2ng",
+        "url": "/meem.png"
+      },
+      "description": "lorem ipsumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      "techStack": ["Wordpress"],
+      "_id": "65b3d734313a9b09a24a14a3",
+      "enabled": true
+    },
+    {
+      "liveurl": "#",
+      "githuburl": "#",
+      "title": "Project 3",
+      "sequence": 3,
+      "image": {
+        "public_id": "1706284839761-ckccdj",
+        "url": "/qn.png"
+      },
+      "techStack": ["Wordpress"],
+      "_id": "65b3d728313a9b09a24a1498",
+      "enabled": true
+    }
+  ],
+  "social_handles": [
+    {
+      "platform": "Instagram",
+      "url": "",
+      "image": {
+        "public_id": "1708718250873-3038n7.webp",
+        "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/1708718250873-3038n7.webp"
+      },
+      "enabled": true,
+      "_id": "65b3ea4feb20546ae6d4641d"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "",
+      "image": {
+        "public_id": "1708718263294-2lfj67.webp",
+        "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/1708718263294-2lfj67.webp"
+      },
+      "enabled": true,
+      "_id": "65b3e99beb20546ae6d463c2"
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "platform": "Twitter",
+      "url": "",
+      "image": {
+        "public_id": "1708718328750-d4jsq.webp",
+        "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/1708718328750-d4jsq.webp"
+      },
+      "_id": "65b3e47cb48589dfcae185bd"
+    },
+    {
+      "enabled": true,
+      "id": 1,
+      "platform": "Facebook",
+      "url": "#",
+      "image": {
+        "public_id": "1708718346601-xldm.webp",
+        "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/1708718346601-xldm.webp"
+      },
+      "_id": "65b3e43cb48589dfcae1856c"
+    }
+  ],
+  "services": [
+    {
+      "name": "Custom Website Development",
+      "desc": "I build brands through cultural insights & strategic vision. Custom crafted business solutions.",
+      "image": {
+        "public_id": "portfolio3/1710357775748-9vwq4q.jpeg",
+        "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/portfolio3/1710357775748-9vwq4q.jpeg"
+      },
+      "enabled": true,
+      "id": "customWebsiteDevelopment",
+      "_id": "65f1fd100556c3f887e9d87b"
+    },
+    {
+      "name": "Digital Marketing",
+      "desc": "Custom marketing solutions. Get your business on the next level. We provide worldwide marketing.",
+      "image": {
+        "public_id": "portfolio3/1710357668346-ke8kgt.jpeg",
+        "url": "/digital.avif"
+      },
+      "id": "digitalMarketing",
+      "_id": "65b3e322b48589dfcae184d0ss",
+      "enabled": true
+    },
+    {
+      "name": "Graphics Designing",
+      "desc": "Custom marketing solutions. Get your business on the next level. We provide worldwide marketing.",
+      "image": {
+        "public_id": "portfolio3/1710357668346-ke8kgt.jpeg",
+        "url": "/graphic.jpg"
+      },
+      "id": "graphicsDesigning",
+      "_id": "65b3e322b48589dfcae184d0",
+      "enabled": true
+    },
+    {
+      "name": "SEO",
+      "desc": "Boost your online presence with our expert SEO services. Drive organic traffic, improve search rankings, and grow your business worldwide with our custom marketing strategies.",
+      "image": {
+        "public_id": "portfolio3/1710357668346-ke8kgt.jpeg",
+        "url": "/seo.png"
+      },
+      "id": "seo",
+      "_id": "65b3e322b48589dfasasacae184d0",
+      "enabled": true
+    },
+    {
+      "name": "Brand Consultation",
+      "desc": "I build brands through cultural insights & strategic vision. Custom crafted business solutions.",
+      "image": {
+        "public_id": "portfolio3/1710357680224-phijt.png",
+        "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/portfolio3/1710357680224-phijt.png"
+      },
+      "id": "brandConsultation",
+      "_id": "65b3e2f6b48589dfcae1843b",
+      "enabled": true
+    },
+    {
+      "name": "Wordpress Development",
+      "desc": "Get yourself a website.",
+      "image": {
+        "public_id": "portfolio3/1710357752227-6f5trs.jpeg",
+        "url": "https://portfolio-image-store.s3.ap-south-1.amazonaws.com/portfolio3/1710357752227-6f5trs.jpeg"
+      },
+      "id": "wordpressDevelopment",
+      "_id": "65b3e2a6b48589dfcae183f2aaa",
+      "enabled": true
+    },
+    {
+      "name": "Shopify Development",
+      "desc": "Get yourself a website.",
+      "image": {
+        "public_id": "portfolio3/1710357752227-6f5trs.jpeg",
+        "url": "/shopify.png"
+      },
+      "id": "shopifyDevelopment",
+      "_id": "6s5b3e2a6b48589dfcae183f2sss",
+      "enabled": true
+    }
+  ],
+"testimonials": [
+  {
+    "image": {
+      "public_id": "portfolio3/1710357726628-c4dr18.png",
+      "url": "/nm1.png"
+    },
+    "name": "Ericka",
+    "review": "Our digital marketing strategy completely transformed after working with this team. Their SEO expertise put us ahead of competitors, and the branding overhaul made a lasting impact.",
+    "position": "Small Business Owner",
+    "enabled": true,
+    "_id": "65f1fcdf0556c3f887e9d74c"
+  },
+  {
+    "image": {
+      "public_id": "portfolio3/1710357705657-aimydg.png",
+      "url": "/nm1.png"
+    },
+    "name": "Ahmed",
+    "review": "I needed a professional website for my Islamic clothing business, and this team delivered exactly what I was looking for. The design was elegant, user-friendly, and aligned with my brand values.",
+    "position": "E-commerce Entrepreneur",
+    "enabled": true,
+    "_id": "65f1fcca0556c3f887e9d6e8"
+  },
+  {
+    "image": {
+      "public_id": "portfolio3/1710357683739-tqeav.png",
+      "url": "/nm1.png"
+    },
+    "name": "Fatima",
+    "review": "Their branding and social media management helped us reach a wider audience for our halal cosmetics store. The team was professional, creative, and understood our vision perfectly.",
+    "position": "Business Owner",
+    "enabled": true,
+    "_id": "65f1fcb30556c3f887e9d662"
+  },
+  {
+    "image": {
+      "public_id": "portfolio3/1710357647030-pi5cis.png",
+      "url": "/nm1.png"
+    },
+    "name": "Muhammad",
+    "review": "Alhamdulillah, I found a team that truly understands the needs of Muslim entrepreneurs. They designed an excellent platform for my online bookstore, making it easier to share Islamic knowledge.",
+    "position": "Founder of an Islamic Bookstore",
+    "enabled": true,
+    "_id": "65f1fc8f0556c3f887e9d4e5"
+  },
+  {
+    "image": {
+      "public_id": "portfolio3/1710357534893-2s9b5d.png",
+      "url": "/nm1.png"
+    },
+    "name": "Charlotte",
+    "review": "They helped us scale our e-commerce store, focusing on user experience and SEO. Within months, we saw a substantial increase in conversions and organic traffic.",
+    "position": "E-commerce Business Owner",
+    "enabled": true,
+    "_id": "65f1fc1f0556c3f887e9d31d"
+  },
+  {
+    "image": {
+      "public_id": "portfolioss3/1710357501234-xzy123.png",
+      "url": "/nm1.png"
+    },
+    "name": "Bilal",
+    "review": "I was looking for someone to help me with SEO for my local business, and this team exceeded expectations. My website now ranks on the first page of search results, bringing in more customers!",
+    "position": "Local Business Owner",
+    "enabled": true,
+    "_id": "65f1fc1f055ssaaa6c3f887e9d41f"
+  },
+  {
+    "image": {
+      "public_id": "portfolio3/1710357456789-abcd123.png",
+      "url": "/nm1.png"
+    },
+    "name": "Omar",
+    "review": "MashAllah, working with this team was a great experience. They created a modern, responsive website for our charity organization and helped us raise awareness through digital marketing.",
+    "position": "Charity Founder",
+    "enabled": true,
+    "_id": "65f1fc1f0556c3223f887e9d51e"
+  },
+  {
+    "image": {
+      "public_id": "portfolio3/1710357409876-efgh456.png",
+      "url": "/nm1.png"
+    },
+    "name": "Anastasia",
+    "review": "I was struggling to build an engaging Shopify store, but this team made it happen seamlessly. Their attention to detail, branding expertise, and support made the whole process stress-free.",
+    "position": "Store Owner",
+    "enabled": true,
+    "_id": "65f1fc1f0556c3f887e9d61a"
+  },
+  {
+    "image": {
+      "public_id": "portfolio3/1710357305678-mnop987.png",
+      "url": "/nm1.png"
+    },
+    "name": "Sergie",
+    "review": "From website development to branding, their team handled everything with professionalism. We saw great results in engagement and lead generation within weeks.",
+    "position": "Marketing Specialist",
+    "enabled": true,
+    "_id": "65f1fc1f0556c3f887e9d81c"
+  }
+],
+  "createdAt": "2024-01-26T12:14:36.514Z",
+  "updatedAt": "2024-05-08T17:53:29.758Z",
+  "__v": 74,
+  "refreshToken": ""
+}
