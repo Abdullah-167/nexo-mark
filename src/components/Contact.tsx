@@ -88,25 +88,6 @@ const Contact = ({ email, social_handle, about }: ContactProps) => {
 
   return (
     <motion.section className="relative" id="contact">
-      <AnimatePresence initial={false}>
-        {status !== "IDLE" && (
-          <motion.li
-            initial={{ opacity: 0, y: 50, scale: 0.3 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.2 } }}
-            className={cn(
-              "fixed top-4 right-4 p-2 px-4 w-[300px] z-50 h-16 rounded-xl bg-white flex items-center",
-              status === "ERROR"
-                ? "bg-red-500"
-                : status === "DONE"
-                ? "bg-green-400"
-                : ""
-            )}
-          >
-            <p className="text-black font-semibold">{statusText}</p>
-          </motion.li>
-        )}
-      </AnimatePresence>
       <span className="blob size-1/2 absolute top-20 right-0 blur-[100px] -z-10" />
       <div className="p-4 md:p-8 md:px-16">
         <SectionHeading className="">
@@ -114,100 +95,96 @@ const Contact = ({ email, social_handle, about }: ContactProps) => {
           <br /> <SlideIn>let’s do it.</SlideIn>
         </SectionHeading>
         <div className="grid md:grid-cols-2 gap-10 md:pt-16">
-          <form className="space-y-4" onSubmit={handleSubmit}>
-            <div className="flex gap-4">
-              <Transition className="w-full">
-                <Input
-                  id="name"
-                  name="name"
-                  placeholder="Full name"
-                  className="border-0 border-b rounded-none"
-                  required
-                  value={formData.name}
-                  onChange={handleInputChange}
-                />
-              </Transition>
-              <Transition className="w-full">
-                <Input
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  type="email"
-                  className="border-0 border-b rounded-none"
-                  required
-                  value={formData.email}
-                  onChange={handleInputChange}
-                />
-              </Transition>
-            </div>
-            <div className="space-y-2">
-              <Transition>
-                <Input
-                  id="subject"
-                  name="subject"
-                  placeholder="Enter the subject"
-                  className="border-0 border-b rounded-none"
-                  required
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                />
-              </Transition>
-            </div>
-            <div className="space-y-2">
-              <Transition>
-                <Textarea
-                  className="min-h-[100px] rounded-none border-0 border-b resize-none"
-                  id="message"
-                  name="message"
-                  placeholder="Enter your message"
-                  required
-                  value={formData.message}
-                  onChange={handleInputChange}
-                />
-              </Transition>
-            </div>
-            <div>
-              <Transition>
-                <motion.button
-                  whileHover="whileHover"
-                  initial="initial"
-                  className="border border-white/30 px-8 py-2 rounded-3xl relative overflow-hidden"
-                  type="submit"
-                >
-                  <TextReveal className="uppercase">
-                    {status === "SENDING" ? "Sending..." : "Send"}
-                  </TextReveal>
-                </motion.button>
-              </Transition>
-            </div>
-          </form>
-          <div className="md:justify-self-end flex flex-col">
-            <div className="pb-4">
-              <Transition>
-                <span className="text-white/90">Get in touch</span>
-              </Transition>
-              <div className="text-2xl md:text-4xl font-bold py-2">
-                <Transition>
-                  <TextReveal>business@nexomark.agency</TextReveal>
+          {status === "DONE" ? (
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center text-white text-2xl font-semibold p-6 bg-white/10 rounded-lg"
+            >
+              <p>Thank you for reaching out to Nexomark!</p>
+              <p className="text-lg text-[#BFBFC6] mt-2">
+                We've received your message and our team will review it shortly.
+                Expect a response within 24-48 hours.
+              </p>
+              <p className="text-lg text-[#BFBFC6] mt-2">
+                In the meantime, feel free to explore our services or check out
+                our latest work.
+              </p>
+              <div className="mt-4">
+                <Link href="#services" className="text-[#BFBFC6] underline">
+                  Check Our Services
+                </Link>
+              </div>
+            </motion.div>
+          ) : (
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              <div className="flex gap-4">
+                <Transition className="w-full">
+                  <Input
+                    id="name"
+                    name="name"
+                    placeholder="Full name"
+                    className="border-0 border-b rounded-none"
+                    required
+                    value={formData.name}
+                    onChange={handleInputChange}
+                  />
+                </Transition>
+                <Transition className="w-full">
+                  <Input
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    type="email"
+                    className="border-0 border-b rounded-none"
+                    required
+                    value={formData.email}
+                    onChange={handleInputChange}
+                  />
                 </Transition>
               </div>
-            </div>
-
-            {/* <div className="flex md:gap-8 gap-4 mt-auto md:pb-16">
-              {social_handle.map((social, index) =>
-                social.enabled ? (
-                  <Transition
-                    key={social._id}
-                    transition={{ delay: 0.4 + index * 0.1 }}
+              <div className="space-y-2">
+                <Transition>
+                  <Input
+                    id="subject"
+                    name="subject"
+                    placeholder="Enter the subject"
+                    className="border-0 border-b rounded-none"
+                    required
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                  />
+                </Transition>
+              </div>
+              <div className="space-y-2">
+                <Transition>
+                  <Textarea
+                    className="min-h-[100px] rounded-none border-0 border-b resize-none"
+                    id="message"
+                    name="message"
+                    placeholder="Enter your message"
+                    required
+                    value={formData.message}
+                    onChange={handleInputChange}
+                  />
+                </Transition>
+              </div>
+              <div>
+                <Transition>
+                  <motion.button
+                    whileHover="whileHover"
+                    initial="initial"
+                    className="border border-white/30 px-8 py-2 rounded-3xl relative overflow-hidden"
+                    type="submit"
                   >
-                    <Link href={social.url} target="_blank">
-                      <TextReveal>{social.platform}</TextReveal>
-                    </Link>
-                  </Transition>
-                ) : null
-              )}
-            </div> */}
-          </div>
+                    <TextReveal className="uppercase">
+                      {status === "SENDING" ? "Sending..." : "Send"}
+                    </TextReveal>
+                  </motion.button>
+                </Transition>
+              </div>
+            </form>
+          )}
         </div>
       </div>
       <footer className="flex items-center justify-between md:px-8 px-2 py-4 text-sm">
@@ -215,10 +192,7 @@ const Contact = ({ email, social_handle, about }: ContactProps) => {
           <div className="flex gap-3">
             <p>
               developed by &copy;
-              <Link
-                href={""}
-                className="hover:underline"
-              >
+              <Link href={""} className="hover:underline">
                 nexomark.agency
               </Link>
             </p>
