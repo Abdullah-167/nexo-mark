@@ -40,7 +40,7 @@ const Header = ({ social }: HeaderProps) => {
     <motion.header className="fixed  top-0 md:mt-12 md:mr-12 right-0 z-20 ">
       <Transition className="fixed md:top-8 top-6 md:left-8 left-6 z-30 ">
         <Link href={"/"}>
-          <Image className="max-h-[50px] object-cover" src={"/logowhite.png"} alt={""} width={250} height={100}/>
+          <Image className="md:max-h-[50px] max-h-[40px] object-cover md:max-w-[250px] max-w-[150px] " src={"/logowhite.png"} alt={""} width={250} height={100}/>
         </Link>
       </Transition>
       <motion.div
