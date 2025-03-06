@@ -8,8 +8,8 @@ export const siteConfig = {
   url: site_url,
   ogImage: `${site_url}/_static/og-image.png`,
   links: {
-    twitter: "https://twitter.com/tehseen_type",
-    github: "https://github.com/tehseen01/the-portfolio",
+    twitter: "",
+    github: "",
   },
-  mailSupport: "tehseen.type@gmail.com",
+  mailSupport: "business@nexomark.agency",
 };
