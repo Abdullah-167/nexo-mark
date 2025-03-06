@@ -2,7 +2,6 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
-
 import { SectionHeading, TextReveal } from "./ui/Typography";
 import { Project } from "../utils/interface";
 import ProjectDialog from "./ProjectDialog";
@@ -24,10 +23,6 @@ function Projects({ projects }: ProjectsProps) {
 
   const numProjectToShow = 6;
 
-  useEffect(() => {
-    const filtered = applyFilters(projects, filterValue);
-    setFilteredProjects(filtered);
-  }, [filterValue, projects]);
 
   const applyFilters = (data: Project[], filterValues: string) => {
     if (!filterValue || filterValues === "all") {
@@ -38,6 +33,13 @@ function Projects({ projects }: ProjectsProps) {
       project.techStack.some((tech) => filterValues === tech.trim())
     );
   };
+
+
+  useEffect(() => {
+    const filtered = applyFilters(projects, filterValue);
+    setFilteredProjects(filtered);
+  }, [filterValue, projects]);
+
 
   return (
     <section className="md:p-8 p-4 mt-10 relative" id="projects">
