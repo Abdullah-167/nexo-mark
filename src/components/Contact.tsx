@@ -103,8 +103,8 @@ const Contact = ({ email, social_handle, about }: ContactProps) => {
             >
               <p>Thank you for reaching out to Nexomark!</p>
               <p className="text-lg text-[#BFBFC6] mt-2">
-                We've received your message and our team will review it shortly.
-                Expect a response within 24-48 hours.
+               {` We've received your message and our team will review it shortly.
+                Expect a response within 24-48 hours.`}
               </p>
               <p className="text-lg text-[#BFBFC6] mt-2">
                 In the meantime, feel free to explore our services or check out
@@ -191,7 +191,7 @@ const Contact = ({ email, social_handle, about }: ContactProps) => {
         <Transition>
           <div className="flex gap-3">
             <p>
-              developed by &copy;
+              {`developed by &copy;`}
               <Link href={""} className="hover:underline">
                 nexomark.agency
               </Link>

@@ -24,23 +24,28 @@ function Projects({ projects }: ProjectsProps) {
   const numProjectToShow = 6;
 
 
-  const applyFilters = (data: Project[], filterValues: string) => {
-    if (!filterValue || filterValues === "all") {
-      return data;
-    }
+  // const applyFilters = (data: Project[], filterValues: string) => {
+  //   if (!filterValue || filterValues === "all") {
+  //     return data;
+  //   }
 
-    return data.filter((project) =>
-      project.techStack.some((tech) => filterValues === tech.trim())
-    );
-  };
+  //   return data.filter((project) =>
+  //     project.techStack.some((tech) => filterValues === tech.trim())
+  //   );
+  // };
 
 
   useEffect(() => {
-    const filtered = applyFilters(projects, filterValue);
-    setFilteredProjects(filtered);
+    setFilteredProjects(() => {
+      if (!filterValue || filterValue === "all") {
+        return projects;
+      }
+      return projects.filter((project) =>
+        project.techStack.some((tech) => filterValue === tech.trim())
+      );
+    });
   }, [filterValue, projects]);
-
-
+  
   return (
     <section className="md:p-8 p-4 mt-10 relative" id="projects">
       <SectionHeading className="md:pl-12">
