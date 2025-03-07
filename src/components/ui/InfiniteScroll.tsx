@@ -24,42 +24,9 @@ export const InfiniteScroll = ({
   const scrollerRef = useRef<HTMLUListElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-useEffect(() => {
-  function addAnimation() {
-    if (containerRef.current && scrollerRef.current) {
-      const scrollerContent = Array.from(scrollerRef.current.children);
-
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
-      });
-
-      setStart(true);
-    }
-  }
-
-  addAnimation();
-
-  if (containerRef.current) {
-    if (direction === "left") {
-      containerRef.current.style.setProperty("--animation-direction", "forwards");
-    } else {
-      containerRef.current.style.setProperty("--animation-direction", "reverse");
-    }
-
-    if (speed === "fast") {
-      containerRef.current.style.setProperty("--animation-duration", "20s");
-    } else if (speed === "normal") {
-      containerRef.current.style.setProperty("--animation-duration", "40s");
-    } else {
-      containerRef.current.style.setProperty("--animation-duration", "80s");
-    }
-  }
-}, [direction, speed]); // Include necessary dependencies
-
-  
+  useEffect(() => {
+    addAnimation();
+  }, []);
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);

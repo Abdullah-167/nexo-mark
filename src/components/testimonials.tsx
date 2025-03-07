@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Testimonial as ITestimonial } from "../utils/interface";
 import { InfiniteScroll } from "./ui/InfiniteScroll";
 import { SlideIn, Transition } from "./ui/Transitions";
@@ -63,7 +62,7 @@ const Testimonial = ({
               </p>
             </div>
             <div className="flex gap-3 pt-6">
-              <Image
+              <img
                 src={val.image.url}
                 width={50}
                 height={50}

@@ -1,9 +1,9 @@
 export interface Portfolio {
   about: About;
-  _id: any;
-  username: any;
-  email: any;
-  role: any;
+  _id: string;
+  username: string;
+  email: string;
+  role: string;
   timeline: Timeline[];
   skills: Skill[];
   youtube: any[];
@@ -11,91 +11,92 @@ export interface Portfolio {
   social_handles: SocialHandle[];
   services: Service[];
   testimonials: Testimonial[];
-  createdAt: any;
-  updatedAt: any;
-  refreshToken: any;
+  createdAt: string;
+  updatedAt: string;
+  refreshToken: string;
 }
 
 export interface About {
-  name: any;
-  title: any;
-  subTitle: any;
-  description: any;
-  quote: any;
-  exp_year: any;
-  address: any;
-  some_total: any;
-  phoneNumber: any;
-  avatar: any;
+  name: string;
+  title: string;
+  subTitle: string;
+  description: string;
+  quote: string;
+  exp_year: string;
+  address: string;
+  some_total: string;
+  phoneNumber: string;
+  avatar: Avatar;
   alternateAvatars: any[];
 }
 
 export interface Avatar {
-  public_id: any;
-  url: any;
+  public_id: string;
+  url: string;
 }
 
 export interface Skill {
-  enabled: any;
-  name: any;
-  sequence: any;
-  percentage: any;
-  image: any;
+  enabled: boolean;
+  name: string;
+  sequence: number;
+  percentage: number;
+  image: Avatar;
+  _id: string;
 }
 
 export interface Project {
-  liveurl: any;
-  githuburl: any;
-  title: any;
-  sequence: any;
+  liveurl: string;
+  githuburl: string;
+  title: string;
+  sequence: number;
   image: Image;
-  description: any;
+  description: string;
   techStack: string[];
-  _id: any;
-  enabled: any;
+  _id: string;
+  enabled: boolean;
 }
 
 export interface Image {
-  public_id: any;
-  url: any;
+  public_id: string;
+  url: string;
 }
 
 export interface SocialHandle {
-  platform: any;
-  url: any;
+  platform: string;
+  url: string;
   image: Image;
-  enabled: any;
-  _id: any;
+  enabled: boolean;
+  _id: string;
 }
 
 export interface Service {
-  name: any;
-  charge: any;
-  desc: any;
-  enabled: any;
-  _id: any;
+  name: string;
+  charge: string;
+  desc: string;
+  enabled: boolean;
+  _id: string;
   image: Image;
 }
 
 export interface Testimonial {
   image: Image;
-  name: any;
-  review: any;
-  position: any;
-  enabled: any;
-  _id: any;
+  name: string;
+  review: string;
+  position: string;
+  enabled: boolean;
+  _id: string;
 }
 
 export interface Timeline {
-  company_name: any;
-  summary: any;
-  sequence: any;
-  startDate: any;
-  endDate: any;
-  jobTitle: any;
-  jobLocation: any;
+  company_name: string;
+  summary: string;
+  sequence: number;
+  startDate: string;
+  endDate: string;
+  jobTitle: string;
+  jobLocation: string;
   bulletPoints: string[];
-  forEducation: any;
-  enabled: any;
-  _id: any;
+  forEducation: boolean;
+  enabled: boolean;
+  _id: string;
 }
