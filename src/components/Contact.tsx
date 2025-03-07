@@ -191,7 +191,7 @@ const Contact = ({ email, social_handle, about }: ContactProps) => {
         <Transition>
           <div className="flex gap-3">
             <p>
-              {`developed by &copy;`}
+              developed by &copy;
               <Link href={""} className="hover:underline">
                 nexomark.agency
               </Link>
