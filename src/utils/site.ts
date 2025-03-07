@@ -2,14 +2,14 @@ const site_url =
   process.env.NEXT_PUBLIC_APP_URL || "https://the-portfolio-lac.vercel.app";
 
 export const siteConfig = {
-  name: "Tehseen | Full Stack Developer",
+  name: "Nexo Mark",
   description:
-    "Personal portfolio website showcasing my projects and skills as a full stack developer",
+    "We provide digital marketing, seo , website development , wordpress develpment, shopify , graphic designing and branding services.",
   url: site_url,
   ogImage: `${site_url}/_static/og-image.png`,
   links: {
-    twitter: "https://twitter.com/tehseen_type",
-    github: "https://github.com/tehseen01/the-portfolio",
+    twitter: "",
+    github: "",
   },
-  mailSupport: "tehseen.type@gmail.com",
+  mailSupport: "business@nexomark.agency",
 };
