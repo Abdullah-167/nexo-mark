@@ -1,5 +1,5 @@
 const site_url =
-  process.env.NEXT_PUBLIC_APP_URL || "https://the-portfolio-lac.vercel.app";
+  process.env.NEXT_PUBLIC_APP_URL || "https://www.nexomark.agency";
 
 export const siteConfig = {
   name: "Nexo Mark",
