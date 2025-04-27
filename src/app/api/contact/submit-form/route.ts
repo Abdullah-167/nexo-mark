@@ -7,12 +7,13 @@ const adminPassword = "GGH1 AA8f camw"; // SMTP password
 
 export async function POST(req: Request) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, message, phone, company, subject, budget, service } =
+      await req.json();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !service ) {
       return NextResponse.json({
         success: false,
-        message: "All fields are required",
+        message: "Name, email , service and message are required",
       });
     }
 
@@ -27,12 +28,26 @@ export async function POST(req: Request) {
       },
     });
 
+    // Compose the email content with all fields
+    const adminEmailContent = `
+New Contact Form Submission:
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone || "N/A"}
+Company: ${company || "N/A"}
+Service: ${service || "N/A"}
+Subject: ${subject || "N/A"}
+Budget: ${budget || "N/A"}
+Message: ${message}
+    `;
+
     // Send email to admin
     await transporter.sendMail({
       from: `"Nexomark" <business@nexomark.agency>`, // Must match your Zoho email
       to: adminEmail,
       subject: "New Contact Form Submission",
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      text: adminEmailContent,
     });
 
     // Send thank you email to user
