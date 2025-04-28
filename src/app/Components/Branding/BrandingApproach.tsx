@@ -60,7 +60,6 @@ const BrandingApproach = () => {
               </p>
             </div>
           </div>
-
           {/* Step 3 */}
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="w-12 h-12 rounded-full bg-neutral-300 flex items-center justify-center text-[#0d0d0d] font-bold text-lg">
