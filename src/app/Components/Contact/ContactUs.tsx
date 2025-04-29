@@ -137,12 +137,12 @@ const ContactUs = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-normal text-neutral-100 mb-6">
-              Let's Work Together
+            {`  Let's Work Together`}
             </h2>
             <div className="h-[2px] w-24 bg-gradient-to-r from-neutral-600 to-neutral-400 mx-auto mb-8"></div>
             <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
-              Ready to elevate your digital presence? Share your project details
-              and we'll get back to you within 24 hours.
+             {` Ready to elevate your digital presence? Share your project details
+              and we'll get back to you within 24 hours.`}
             </p>
           </motion.div>
 
@@ -175,8 +175,8 @@ const ContactUs = () => {
                   Message Sent Successfully!
                 </h3>
                 <p className="text-neutral-400 mb-6">
-                  Thank you for contacting us. We've received your details and
-                  will get back to you shortly.
+                {`  Thank you for contacting us. We've received your details and
+                  will get back to you shortly.`}
                 </p>
                 <button
                   onClick={() => setSubmitSuccess(false)}
