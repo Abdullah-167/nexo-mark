@@ -99,7 +99,7 @@ export default function Navbar() {
 
           {[
             { name: "About", link: "/about-us" },
-            { name: "Contact", link: "/contact" },
+            { name: "Contact", link: "/contact-us" },
           ].map((item) => (
             <motion.a
               key={item.name}
