@@ -156,7 +156,7 @@ export default function Navbar() {
                 },
                 { name: "Work", href: "/work" },
                 { name: "About", href: "/about-us" },
-                { name: "Contact", href: "/contact" },
+                { name: "Contact", href: "/contact-us" },
               ].map((item) => (
                 <div
                   key={item.name}
