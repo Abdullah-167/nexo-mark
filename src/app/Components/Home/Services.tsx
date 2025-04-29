@@ -1,8 +1,11 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Services() {
+  const router = useRouter();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -19,20 +22,20 @@ export default function Services() {
     {
       title: "Digital Marketing",
       description:
-        "In the ever-evolving digital landscape, it’s crucial for brands to not just exist but to thrive. At Nexomark, our Digital Marketing services empower your business to reach new heights by implementing data-driven strategies tailored to your specific goals.",
+        "In the ever-evolving digital landscape, it's crucial for brands to not just exist but to thrive. At Nexomark, our Digital Marketing services empower your business to reach new heights by implementing data-driven strategies tailored to your specific goals.",
       highlight: "From social to search, we make brands impossible to ignore",
     },
     {
       title: "Web Development",
       description:
-        "In today’s digital world, having a strong online presence is more than just a necessity; it’s a competitive advantage. At Nexomark, we specialize in creating bespoke websites that not only look stunning but function flawlessly. Whether you need a custom website, an eCommerce store, or a complex web application, we’ve got you covered.",
+        "In today's digital world, having a strong online presence is more than just a necessity; it's a competitive advantage. At Nexomark, we specialize in creating bespoke websites that not only look stunning but function flawlessly. Whether you need a custom website, an eCommerce store, or a complex web application, we've got you covered.",
       highlight:
         "Websites that load instantly, convert reliably, and scale effortlessly",
     },
     {
       title: "Web Design & UI/UX",
       description:
-        "In today’s fast-paced digital world, the user experience is everything. Our design philosophy centers on crafting intuitive, visually stunning interfaces that not only captivate but also convert. From custom websites to immersive eCommerce platforms, we ensure that every element enhances the user journey.",
+        "In today's fast-paced digital world, the user experience is everything. Our design philosophy centers on crafting intuitive, visually stunning interfaces that not only captivate but also convert. From custom websites to immersive eCommerce platforms, we ensure that every element enhances the user journey.",
       highlight: "Design that removes friction and amplifies engagement",
     },
     {
@@ -44,7 +47,7 @@ export default function Services() {
     {
       title: "Graphics Design",
       description:
-        "Transform your brand’s visual identity with compelling, creative designs that capture attention and tell your story. Our graphic design services blend aesthetics with functionality, creating designs that not only look great but also resonate with your target audience.",
+        "Transform your brand's visual identity with compelling, creative designs that capture attention and tell your story. Our graphic design services blend aesthetics with functionality, creating designs that not only look great but also resonate with your target audience.",
       highlight: "Assets that grow in value as your brand evolves",
     },
     {
@@ -56,16 +59,21 @@ export default function Services() {
     {
       title: "Social Media Management",
       description:
-        "Leverage the power of social media to amplify your brand’s reach and engagement. Our social media management services include content creation, strategy development, and community building to ensure your brand stays connected with its audience, grows organically, and converts effectively.",
+        "Leverage the power of social media to amplify your brand's reach and engagement. Our social media management services include content creation, strategy development, and community building to ensure your brand stays connected with its audience, grows organically, and converts effectively.",
       highlight: "Engagement that drives loyalty and awareness",
     },
     {
       title: "Video Editing & Animation",
       description:
-        "Tell your story through captivating videos and animations. Our video editing and animation services bring your brand’s message to life with professional-grade visuals that captivate, educate, and convert. From explainer videos to dynamic animations, we deliver content that engages your audience.",
+        "Tell your story through captivating videos and animations. Our video editing and animation services bring your brand's message to life with professional-grade visuals that captivate, educate, and convert. From explainer videos to dynamic animations, we deliver content that engages your audience.",
       highlight: "Videos that captivate, communicate, and convert",
     },
   ];
+
+  const handleServiceClick = (serviceTitle: string) => {
+    // Scroll to contact form
+    router.push(`#contact?service=${encodeURIComponent(serviceTitle)}`);
+  };
 
   return (
     <section
@@ -132,9 +140,10 @@ export default function Services() {
                   <div>
                     {/* Arrow Icon */}
                     <motion.div
-                      className={`transform transition-all ${
-                        activeIndex === index ? "rotate-180" : "rotate-0"
-                      } duration-300`}
+                      animate={{
+                        rotate: activeIndex === index ? 180 : 0,
+                      }}
+                      transition={{ duration: 0.3 }}
                     >
                       <svg
                         width="30"
@@ -165,28 +174,27 @@ export default function Services() {
                       {service.description}
                     </p>
                     <div className="flex items-center gap-4">
-                      <a
-                        href="#"
-                        className="inline-flex items-center gap-1 text-sm text-neutral-400/90 hover:text-blue-400 transition-colors duration-300 group/link tracking-tight"
-                      >
-                        <span className="border-b border-transparent group-hover/link:border-blue-400/50 transition-all duration-300 pb-0.5">
-                          View case studies
-                        </span>
-                        <svg
-                          width="14"
-                          height="14"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          className="mt-0.5 opacity-80"
-                        >
-                          <path
-                            d="M5 11L11 5M11 5H5M11 5V11"
-                            stroke="currentColor"
-                            strokeWidth="1.1"
-                            strokeLinecap="round"
-                          />
-                        </svg>
-                      </a>
+                      <Link href={"/contact-us"}>
+                        <button className="inline-flex items-center gap-1 text-sm text-neutral-400/90 hover:text-blue-400 transition-colors duration-300 group/link tracking-tight">
+                          <span className="border-b border-transparent group-hover/link:border-blue-400/50 transition-all duration-300 pb-0.5">
+                            Get a quote for this service
+                          </span>
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            className="mt-0.5 opacity-80"
+                          >
+                            <path
+                              d="M5 11L11 5M11 5H5M11 5V11"
+                              stroke="currentColor"
+                              strokeWidth="1.1"
+                              strokeLinecap="round"
+                            />
+                          </svg>
+                        </button>
+                      </Link>
                     </div>
                   </motion.div>
                 )}

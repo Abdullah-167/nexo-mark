@@ -19,7 +19,7 @@ export default function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed z-[10000] top-0 w-full bg-neutral-950/80 backdrop-blur-md z-50 border-b border-neutral-800"
+      className="fixed z-[10000] top-0 w-full bg-neutral-950/80 backdrop-blur-md  border-b border-neutral-800"
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo - matches hero typography */}
@@ -53,7 +53,7 @@ export default function Navbar() {
               whileHover={{ color: "#f5f5f5" }}
               className="flex items-center gap-1 text-neutral-300 text-sm tracking-wider"
             >
-              <Link href={'/services'}>Services</Link>
+              <Link href={"/services"}>Services</Link>
               <motion.span
                 animate={{ rotate: servicesHover ? 180 : 0 }}
                 transition={{ duration: 0.2 }}
@@ -63,43 +63,52 @@ export default function Navbar() {
             </motion.button>
 
             <AnimatePresence>
-  {servicesHover && (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 10 }}
-      transition={{ type: "spring", damping: 25 }}
-      className="absolute top-full left-0 mt-4 w-48 bg-neutral-900 rounded-lg border border-neutral-800 overflow-hidden shadow-xl"
-    >
-      {[
-        { name: "Web Development", link: "/services/website-development" },
-        { name: "UI/UX Design", link: "/services/ui-ux" },
-        { name: "Branding", link: "/services/branding" },
-        { name: "Digital Marketing", link: "/services/digital-marketing" },
-        { name: "Consultation", link: "/contact" }, // Custom additional link
-      ].map((service) => (
-        <motion.a
-          key={service.name}
-          href={service.link}
-          whileHover={{ backgroundColor: "rgba(255,255,255,0.05)" }}
-          className="block px-4 py-3 text-neutral-300 text-sm border-b border-neutral-800 last:border-0"
-        >
-          {service.name}
-        </motion.a>
-      ))}
-    </motion.div>
-  )}
-</AnimatePresence>
+              {servicesHover && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ type: "spring", damping: 25 }}
+                  className="absolute top-full left-0 mt-4 w-48 bg-neutral-900 rounded-lg border border-neutral-800 overflow-hidden shadow-xl"
+                >
+                  {[
+                    {
+                      name: "Web Development",
+                      link: "/services/website-development",
+                    },
+                    { name: "UI/UX Design", link: "/services/ui-ux" },
+                    { name: "Branding", link: "/services/branding" },
+                    {
+                      name: "Digital Marketing",
+                      link: "/services/digital-marketing",
+                    },
+                  ].map((service) => (
+                    <motion.a
+                      key={service.name}
+                      href={service.link}
+                      whileHover={{ backgroundColor: "rgba(255,255,255,0.05)" }}
+                      className="block px-4 py-3 text-neutral-300 text-sm border-b border-neutral-800 last:border-0"
+                    >
+                      {service.name}
+                    </motion.a>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
-          {["Work", "About", "Contact"].map((item) => (
+          {[
+            { name: "Work", link: "/work" },
+            { name: "About", link: "/about-us" },
+            { name: "Contact", link: "/contact" },
+          ].map((item) => (
             <motion.a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.name}
+              href={`#${item.link.toLowerCase()}`}
               whileHover={{ color: "#f5f5f5" }}
               className="text-neutral-300 text-sm tracking-wider"
             >
-              {item}
+              {item.name}
             </motion.a>
           ))}
         </div>
@@ -130,19 +139,19 @@ export default function Navbar() {
           >
             <div className="px-6 py-4 space-y-4">
               {[
-                { name: "Home", href: "#home" },
+                { name: "Home", href: "/" },
                 {
                   name: "Services",
                   subitems: [
-                    "Web Development",
-                    "UI/UX Design",
-                    "Branding",
-                    "Digital Marketing",
+                    { name: "Website Development", link: "/services-website-development" },
+                    { name: "Ui/Ux", link: "/services/ui-ux" },
+                    { name: "Digital Marketing", link: "/services/digital-marketing" },
+                    { name: "Branding", link: "/services/branding" },
                   ],
                 },
-                { name: "Work", href: "#work" },
-                { name: "About", href: "#about" },
-                { name: "Contact", href: "#contact" },
+                { name: "Work", href: "/work" },
+                { name: "About", href: "/about-us" },
+                { name: "Contact", href: "/contact" },
               ].map((item) => (
                 <div
                   key={item.name}
@@ -180,14 +189,12 @@ export default function Navbar() {
                           >
                             {item.subitems?.map((subitem) => (
                               <a
-                                key={subitem}
-                                href={`#${subitem
-                                  .toLowerCase()
-                                  .replace(" ", "-")}`}
+                                key={subitem.name}
+                                href={subitem.link}
                                 className="block text-neutral-400 py-2 text-sm"
                                 onClick={() => setIsOpen(false)}
                               >
-                                {subitem}
+                                {subitem.name}
                               </a>
                             ))}
                           </motion.div>

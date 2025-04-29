@@ -2,8 +2,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Calendar, Clock } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 
 type FormData = {
   name: string;
@@ -18,24 +19,38 @@ type FormData = {
 };
 
 const ContactUs = () => {
+  const searchParams = useSearchParams();
+  const serviceParam = searchParams.get("service");
+  
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm<FormData>();
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [selectedDate, setSelectedDate] = useState<string>("");
   const [selectedTime, setSelectedTime] = useState<string>("");
 
+  // Set the service from URL parameter on component mount
+  useEffect(() => {
+    if (serviceParam) {
+      setValue("service", decodeURIComponent(serviceParam));
+    }
+  }, [serviceParam, setValue]);
+
   const services = [
-    "Brand Strategy",
-    "Web Development",
-    "UI/UX Design",
     "Digital Marketing",
-    "Content Creation",
-    "SEO Services",
+    "Web Development",
+    "Web Design & UI/UX",
+    "Search Engine Optimization",
+    "Graphics Design",
+    "Branding Services",
+    "Social Media Management",
+    "Video Editing & Animation",
     "Other",
   ];
 
@@ -112,7 +127,7 @@ const ContactUs = () => {
       </motion.div>
 
       <div className="container relative z-10 px-6 mx-auto">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto pt-10">
           {/* Section header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -122,12 +137,12 @@ const ContactUs = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-normal text-neutral-100 mb-6">
-             {` Let's <span className="text-neutral-400">Work Together</span>`}
+              Let's Work Together
             </h2>
             <div className="h-[2px] w-24 bg-gradient-to-r from-neutral-600 to-neutral-400 mx-auto mb-8"></div>
             <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
-             {` Ready to elevate your digital presence? Share your project details
-              and we'll get back to you within 24 hours.`}
+              Ready to elevate your digital presence? Share your project details
+              and we'll get back to you within 24 hours.
             </p>
           </motion.div>
 
@@ -160,8 +175,8 @@ const ContactUs = () => {
                   Message Sent Successfully!
                 </h3>
                 <p className="text-neutral-400 mb-6">
-                  {`Thank you for contacting us. We've received your details and
-                  will get back to you shortly.`}
+                  Thank you for contacting us. We've received your details and
+                  will get back to you shortly.
                 </p>
                 <button
                   onClick={() => setSubmitSuccess(false)}
@@ -212,7 +227,7 @@ const ContactUs = () => {
                         required: "Email is required",
                         pattern: {
                           value:
-                            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, // Regex pattern for valid email
+                            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
                           message: "Invalid email address",
                         },
                       })}

@@ -1,6 +1,7 @@
 // app/components/Hero.tsx
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 import { useRef } from "react";
 
 export default function BrandingHero() {
@@ -75,18 +76,22 @@ export default function BrandingHero() {
             transition={{ delay: 1.2, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
+                        <Link href={'/about-us'}>
             <motion.button
-              whileHover={{ backgroundColor: "#f5f5f5", color: "#171717" }}
+              whileHover={{ backgroundColor: '#f5f5f5', color: '#171717' }}
               className="px-8 py-3.5 bg-neutral-100 text-neutral-900 rounded-full text-sm font-medium tracking-wide"
             >
-              View our work
+             About our studio
             </motion.button>
+            </Link>
+            <Link href={'/contact-us'}>
             <motion.button
-              whileHover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+              whileHover={{ backgroundColor: 'rgba(255,255,255,0.1)' }}
               className="px-8 py-3.5 border border-neutral-600 text-neutral-100 rounded-full text-sm font-medium tracking-wide"
             >
-              About our studio
+              Contact Us
             </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

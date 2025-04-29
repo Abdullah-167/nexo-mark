@@ -14,7 +14,7 @@ export default function Footer() {
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-radial from-indigo-500/10 via-transparent to-transparent opacity-20 pointer-events-none"></div>
 
-      <div className="container mx-auto px-6 grid md:grid-cols-3 gap-12 text-center md:text-left relative z-10">
+      <div className="container mx-auto px-6 grid md:grid-cols-3 lg:grid-cols-4 gap-12 text-center md:text-left relative z-10">
         {/* Logo and Description */}
         <div className="flex flex-col items-center md:items-start space-y-4">
           <motion.a href="/" whileHover={{ scale: 1.03 }} className="">
@@ -42,7 +42,7 @@ export default function Footer() {
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.05 }}
-            href="/about"
+            href="/about-us"
             className="hover:text-white transition"
           >
             About Us
@@ -62,43 +62,69 @@ export default function Footer() {
             Contact
           </motion.a>
         </div>
+        <div className="flex flex-col space-y-3">
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            href="/services/website-development"
+            className="hover:text-white transition"
+          >
+            Website Development
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            href="/services/digital-marketing"
+            className="hover:text-white transition"
+          >
+            Digital Marketing
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            href="/services/ui-ux"
+            className="hover:text-white transition"
+          >
+            Ui/Ux
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            href="/services/Branding"
+            className="hover:text-white transition"
+          >
+            Branding
+          </motion.a>
+        </div>
 
         {/* Social Media Icons */}
         <div className="flex justify-center md:justify-end items-center space-x-6">
           <motion.a
             whileHover={{ scale: 1.2 }}
-            href="#"
+            href="https://facebook.com/profile.php?id=61575301816998"
+            target="_blank"
             className="hover:text-white transition"
           >
             <FaFacebookF size={20} />
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.2 }}
-            href="#"
-            className="hover:text-white transition"
-          >
-            <FaTwitter size={20} />
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: 1.2 }}
-            href="#"
-            className="hover:text-white transition"
-          >
-            <FaLinkedinIn size={20} />
-          </motion.a>
-          <motion.a
-            whileHover={{ scale: 1.2 }}
-            href="#"
+            href="https://www.instagram.com/nexomark.agency/"
+            target="_blank"
             className="hover:text-white transition"
           >
             <FaInstagram size={20} />
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            href="https://www.linkedin.com/company/nexo-mark"
+            target="_blank"
+            className="hover:text-white transition"
+          >
+            <FaLinkedinIn size={20} />
           </motion.a>
         </div>
       </div>
 
       {/* Copyright Bar */}
       <div className="mt-16 border-t border-neutral-700 pt-6 text-center text-sm text-neutral-500">
-        © {new Date().getFullYear()} YourBrand. All rights reserved.
+        © {new Date().getFullYear()} Nexo Mark. All rights reserved.
       </div>
     </footer>
   );

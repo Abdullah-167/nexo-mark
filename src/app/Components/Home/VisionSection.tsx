@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function VisionSection() {
   return (
@@ -30,13 +31,14 @@ export default function VisionSection() {
         ></motion.div>
 
         {/* Call To Action Button */}
-
-        <motion.button
-          whileHover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
-          className="px-8 py-3.5 border border-[#818cf8] text-[#818cf8] rounded-full text-sm font-medium tracking-wide"
-        >
-         {` Let's Discuss Your Project`}
-        </motion.button>
+        <Link href={"/contact-us"}>
+          <motion.button
+            whileHover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
+            className="px-8 py-3.5 border border-[#818cf8] text-[#818cf8] rounded-full text-sm font-medium tracking-wide"
+          >
+            {` Let's Discuss Your Project`}
+          </motion.button>
+        </Link>
       </div>
     </section>
   );
