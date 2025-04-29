@@ -98,13 +98,12 @@ export default function Navbar() {
           </div>
 
           {[
-            { name: "Work", link: "/work" },
             { name: "About", link: "/about-us" },
             { name: "Contact", link: "/contact" },
           ].map((item) => (
             <motion.a
               key={item.name}
-              href={`#${item.link.toLowerCase()}`}
+              href={`${item.link.toLowerCase()}`}
               whileHover={{ color: "#f5f5f5" }}
               className="text-neutral-300 text-sm tracking-wider"
             >
@@ -143,9 +142,15 @@ export default function Navbar() {
                 {
                   name: "Services",
                   subitems: [
-                    { name: "Website Development", link: "/services-website-development" },
+                    {
+                      name: "Website Development",
+                      link: "/services-website-development",
+                    },
                     { name: "Ui/Ux", link: "/services/ui-ux" },
-                    { name: "Digital Marketing", link: "/services/digital-marketing" },
+                    {
+                      name: "Digital Marketing",
+                      link: "/services/digital-marketing",
+                    },
                     { name: "Branding", link: "/services/branding" },
                   ],
                 },
