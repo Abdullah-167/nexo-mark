@@ -9,6 +9,8 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -16,11 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <head />
-      <ProgressBar />
-      <Navbar />
-      <body className={poppins.className}>{children}</body>
-      <Footer />
+      <body className={poppins.className}>
+        <ProgressBar />
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
