@@ -20,7 +20,7 @@ export default function CallToAction() {
         </p>
 
         <motion.a 
-          href="/contact"
+          href="/contact-us"
           className="inline-block px-10 py-4 bg-neutral-100 text-neutral-900 font-semibold text-lg rounded-full shadow-lg hover:bg-neutral-200 transition duration-300"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
