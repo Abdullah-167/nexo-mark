@@ -1,21 +1,30 @@
-"use client";
 import React, { Suspense } from "react";
 import ContactUs from "../Components/Contact/ContactUs";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Contact Us - Nexo Mark",
-  description:
-    "Have a project in mind? Get in touch with Nexo Mark for web development, digital marketing, SEO, branding, and more. We're here to turn your ideas into results-driven solutions.",
-};
+import Head from "next/head";
 
 const Page = () => {
   return (
-    <main>
-      <Suspense fallback={<div>Loading...</div>}>
-        <ContactUs />
-      </Suspense>
-    </main>
+    <>
+      {/* Meta tags for SEO */}
+      <Head>
+        <title>Contact Us - Nexo Mark</title>
+        <meta
+          name="description"
+          content="Have a project in mind? Get in touch with Nexo Mark for expert web development, digital marketing, SEO, branding, and more. We're here to turn your ideas into results-driven solutions."
+        />
+        <meta
+          name="keywords"
+          content="Contact Us, Nexo Mark, web development, SEO, digital marketing, branding, get in touch"
+        />
+      </Head>
+
+      {/* Main content with Suspense for loading */}
+      <main>
+        <Suspense fallback={<div>Loading...</div>}>
+          <ContactUs />
+        </Suspense>
+      </main>
+    </>
   );
 };
 
