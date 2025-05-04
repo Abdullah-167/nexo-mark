@@ -6,7 +6,7 @@ const page = () => {
       <div className="text-center">
         <h1 className="text-white text-6xl font-bold mb-4">404</h1>
         <p className="text-gray-300 text-2xl mb-8">
-          Page not found. Let's get you back on track!
+         {` Page not found. Let's get you back on track!`}
         </p>
         {/* You can add a back button or a link to the homepage here */}
         {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
