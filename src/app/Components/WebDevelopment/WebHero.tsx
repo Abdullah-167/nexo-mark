@@ -19,7 +19,7 @@ export default function WebHero() {
   return (
     <section
       ref={ref}
-      className="relative h-screen flex items-center justify-center overflow-hidden bg-[#000000]"
+      className="relative md:h-screen md:pt-0 pt-40  flex items-center justify-center overflow-hidden bg-[#000000]"
       id="home"
     >
       {/* Background layer (Instrument-style subtle texture) */}

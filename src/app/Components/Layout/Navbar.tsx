@@ -144,7 +144,7 @@ export default function Navbar() {
                   subitems: [
                     {
                       name: "Website Development",
-                      link: "/services-website-development",
+                      link: "/services/website-development",
                     },
                     { name: "Ui/Ux", link: "/services/ui-ux" },
                     {
@@ -154,7 +154,6 @@ export default function Navbar() {
                     { name: "Branding", link: "/services/branding" },
                   ],
                 },
-                { name: "Work", href: "/work" },
                 { name: "About", href: "/about-us" },
                 { name: "Contact", href: "/contact-us" },
               ].map((item) => (

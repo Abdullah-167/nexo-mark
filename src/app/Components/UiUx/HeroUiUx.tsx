@@ -18,7 +18,7 @@ export default function HeroUiUx() {
   return (
     <section
       ref={ref}
-      className="relative h-screen flex items-center justify-center overflow-hidden bg-[#000000]"
+      className="relative h-screen md:pt-0 pt-48 flex items-center justify-center overflow-hidden bg-[#000000]"
       id="home"
     >
       {/* Background layer (Instrument-style subtle texture) */}

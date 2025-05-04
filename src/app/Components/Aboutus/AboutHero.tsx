@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function AboutHero() {
   return (
-    <section className="relative h-[90vh] flex items-center justify-center bg-[#000000] overflow-hidden">
+    <section className="relative h-[90vh] md:pt-0 pt-10  flex items-center justify-center bg-[#000000] overflow-hidden">
       {/* Soft gradient background wash */}
       <motion.div
         animate={{
@@ -37,7 +37,7 @@ export default function AboutHero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto"
+          className="text-lg md:text-xl pb-8 text-neutral-400 max-w-2xl mx-auto"
         >
           {`At Nexo Mark, we're not just creating brands we're crafting legacies that stand the test of time.`}
         </motion.p>
